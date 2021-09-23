@@ -14,7 +14,7 @@ QString QValueSliderPlugin::domXml() const
 {
 	return	R"xml(
 			<ui language="c++">
-			<widget class="QValueSlider" name="QValueSlider">
+			<widget class="QValueSlider" name="valueSlider">
 				<property name="geometry">
 					<rect>
 						<x>0</x>
@@ -22,12 +22,6 @@ QString QValueSliderPlugin::domXml() const
 						<width>230</width>
 						<height>20</height>
 					</rect>
-				</property>
-				<property name="toolTip" >
-					<string>Spin box with slider</string>
-				</property>
-				<property name="whatsThis" >
-					<string>Spin box with slider</string>
 				</property>
 			</widget>
 			</ui>)xml";

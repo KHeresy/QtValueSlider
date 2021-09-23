@@ -5,11 +5,13 @@
 class QValueSliderPlugin : public QObject, public QDesignerCustomWidgetInterface
 {
 	Q_OBJECT
-		Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QDesignerCustomWidgetInterface")
-		Q_INTERFACES(QDesignerCustomWidgetInterface)
+	Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QDesignerCustomWidgetInterface")
+	Q_INTERFACES(QDesignerCustomWidgetInterface)
 
 public:
 	explicit QValueSliderPlugin(QObject* parent = nullptr);
+
+	QIcon icon() const override;
 
 	QString name() const override
 	{
@@ -18,7 +20,7 @@ public:
 
 	QString group() const override
 	{
-		return QStringLiteral("Display Widgets");
+		return QStringLiteral("Input Widgets");
 	}
 
 	QString toolTip() const override
@@ -48,7 +50,6 @@ public:
 		return QStringLiteral("Lib/ValueSlider.h");
 	}
 
-	QIcon icon() const override;
 	QString domXml() const override;
 	QWidget* createWidget(QWidget* parent) override;
 };

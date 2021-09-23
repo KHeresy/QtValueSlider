@@ -35,10 +35,10 @@ signals:
 
 protected:
 	void updateSliderSetting();
-	void paintEvent(QPaintEvent* pEvt) override
-	{
-		QWidget::paintEvent(pEvt);
-	}
+	//void paintEvent(QPaintEvent* pEvt) override
+	//{
+	//	QWidget::paintEvent(pEvt);
+	//}
 
 protected slots:
 	void spinBoxValueChanged(double);
